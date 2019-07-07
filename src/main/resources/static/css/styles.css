@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css?family=Concert+One&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+
+
+body {
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Concert One', cursive;
+    margin: auto;
+    /* background: url("icons/wall.jpeg"); */
+     background: url("/song/icons/wall.jpeg"); 
+    /* background-attachment: fixed;
+    background-size: cover; */
+        background-attachment: fixed;
+        background-size: cover;
+            /*background-attachment: fixed;*/
+
+}
+
+/*body::after {
+    content: "";
+    background: url("/song/icons/wall.jpeg"); 
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+    background-attachment: fixed;
+    background-size:auto;
+}*/
+
+
+h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 10vw;
+    color: #fff78f;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #0c99c1;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 3px white, 10px 10px 10px #22b9ca;
+
+}
+
+#linkscontainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/* a {
+ padding: 10px;
+ font-size: 5vw;
+ text-decoration-line: none;
+} */
+
+#linkscontainer a {
+
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 2.5vw;
+    color: #fff78f;
+    letter-spacing: 2px;
+}
+
+#linkcont {
+    background-color: #0c99c1;
+    /* box-shadow: 0 5px 0 darkred; */
+    padding: 1em;
+    position: relative;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px #22b9ca; 
+
+}
+
+#linkcont:hover {
+    /* cursor: pointer; */
+    box-shadow:         3px 3px 3px white, 10px 10px 10px #22b9ca; 
+}
+
+#linkcont img {
+    width: 3em;
+    padding: 10px;
+    -webkit-filter: invert(100%);
+}
+
+/* navigation */
+nav {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    background-color: #22b9ca;
+    border-radius: 10px;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 2.5vw;
+    color: #fff78f;
+    letter-spacing: 2px;
+    margin: 10px;
+    border-right: 3px solid #fff78f;
+    padding: 5px;
+    /* border-bottom: 3px solid #fff78f; */
+}
+nav a:hover {
+    text-decoration-line: underline;
+}
+
+#title {
+         width: auto; 
+    text-align: center;
+    font-size: 5.5vw;
+    color: #fff78f;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #0c99c1;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 3px white, 10px 10px 10px #22b9ca;
+    position: absolute;
+    top: 3%;
+    margin: 0;
+    left: 60%;
+}
+/* table */
+
+table {
+    border-collapse:separate; 
+    border-spacing:0 30px; 
+}
+
+table td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+thead {
+    background-color: #22b9ca;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    /*font-size: 2.5vw;*/
+    color: #fff78f;
+}
+
+thead td:not(:last-child) {
+        border-right: 3px solid #fff78f;
+}
+
+thead td {
+    padding: 10px;
+}
+
+tbody tr {
+    box-shadow:         3px 3px 3px white, 5px 5px 5px #22b9ca; 
+
+}
+
+tbody td{
+    padding: 10px;
+    color: #f30cd4
+        /* background-color: ; */
+}
+
+table tbody tr:nth-child(even) {
+    background: #fff78f;
+
+}
+
+table tbody tr:nth-child(odd) {
+    background: #F8F8F8;
+}
+
+table img {
+    width: 70%;
+    height: auto;
+    border-radius: 20px;
+    border: 6px solid #f30cd4;
+}
+
+tbody a {
+    color: #f30cd4;
+    text-decoration: none;
+}
+
+tbody a:hover {
+    text-decoration-line: underline;
+
+}
+
+
+/*overlay*/
+
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+/*display: none;*/
+width: 100%; /* Full width (cover the whole page) */
+height: 100%; /* Full height (cover the whole page) */
+top: 0; 
+left: 0;
+right: 0;
+bottom: 0;
+background: rgba(0, 0, 0, 0.7);
+transition: opacity 500ms;
+z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+#overlay:target {
+    display: none;
+}
+
+#overlay #lyrics {
+    background-color: whitesmoke;
+    overflow: scroll;
+    padding: 20px;
+    transition: all 5s ease-in-out;
+    height: 550px;
+
+}
+
+#overlay #close {
+
+    color: #f30cd4;
+    position: relative;
+    left: 50%;
+        top: 5%;
+    width: 100%;
+    /* width: 100%; */
+    display: block;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0;
+    margin-top: 10px;
+        text-decoration: none;
+
+}
+
+/* upload song form */
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+  }
+  
+  .inputfile + label {
+    background: #f30cd4;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+      font-family: 'Poppins', sans-serif;
+      font-size: inherit;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    outline: none;
+    padding: 1rem 50px;
+    position: relative;
+    transition: all 0.3s;
+    vertical-align: middle;
+  }
+
+  .inputfile:hover + label, .inputfile + label:hover {
+    box-shadow:         3px 3px 3px white, 10px 10px 10px #22b9ca; 
+
+      }
+      
+    .btn-1 {
+        background: #f30cd4;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+          font-family: 'Poppins', sans-serif;
+          font-size: inherit;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        outline: none;
+        padding: 1rem 50px;
+        position: relative;
+        transition: all 0.3s;
+        vertical-align: middle;
+    }
+        .btn-1:hover {
+            box-shadow:         3px 3px 3px white, 10px 10px 10px #22b9ca; 
+
+        }
