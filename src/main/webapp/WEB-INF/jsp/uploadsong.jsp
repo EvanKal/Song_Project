@@ -25,7 +25,7 @@
         <h1 id="title">MP3 deposit</h1>
 
         <form  method="Post" action="/song/songcontroller/douploadsong" enctype="multipart/form-data">
-            <input class="inputfile" id ="upload" type="file" name="myfile" accept=".mp3" data-max-size="2048">
+            <input class="inputfile" id ="upload" type="file" name="myfile" accept=".mp3">
             <label for="upload">Choose MP3 file to upload</label>
             <input class="btn-1" type="submit">
         </form>
